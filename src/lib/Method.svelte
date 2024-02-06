@@ -262,7 +262,7 @@
   section {
     border: 1px solid rgba(255, 255, 255, 0.478);
     display: grid;
-    grid-template-columns: 120px 150px repeat(2,1fr);
+    grid-template-columns: 120px 210px repeat(2,1fr);
   }
   section > div {
     padding: 0.5rem;
