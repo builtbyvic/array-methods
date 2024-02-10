@@ -1,84 +1,129 @@
 <script>
   import methods from "../data/methods";
+
+  const methodTypeClasses = {
+    "array iterator": 'array-iterator',
+    "stack and queue": 'stack-and-queue',
+    "sub-array": 'sub-array',
+    "search and sort": 'search-and-sort',
+  }
 </script>
-<header>
-  <div>Title</div>
-  <div>Code</div>
-  <div>Description</div>
-  <div>Return Value</div>
-</header>
-<section>
-  {#each methods as method}
-    <div class="parent-div" style:position="relative">
-      <span>{method.title}</span>
-      <div class="tags-wrapper">
-        <span class="{method.mutatesArray === "no" ? 'destructive' : 'affirmitive'}">{method.mutatesArray}</span>
-        {#if method.type === 'array iterator'}
-          <span class="array-iterator">{method.type}</span>
-        {:else if method.type === 'stack and queue'}
-          <span class="stack-and-queue">{method.type}</span>
-        {:else if method.type === 'sub-array'}
-          <span class="sub-array">{method.type}</span>
-        {:else}
-          <span class="search-and-sort">{method.type}</span>
-        {/if}
-        <!-- <span class={className}>{method[5]['type']}</span> -->
-      </div>
-    </div>
-    <div>{method.name}</div>
-    <div>{method.description}</div>
-    <div>{method.returnValue}</div>
-    <div class="image-wrapper">
-      <img src={method.exampleImage} alt="example"/>
-    </div>
-  {/each}
-</section>
+<main>
+  <header>
+    <div>Title</div>
+    <div>Code</div>
+    <div>Description</div>
+    <div>Return Value</div>
+  </header>
+  <section>
+    <ul>
+      {#each methods as method}
+      <li>
+        <div>
+          <span>{method.title}</span>
+          <div>
+            <span class="{method.mutatesArray === "no" ? 'destructive' : 'affirmitive'}">{method.mutatesArray}</span>
+            <span class="{methodTypeClasses[method.type]}">{method.type}</span>
+          </div>
+        </div>
+        <div>{method.name}</div>
+        <div>{method.description}</div>
+        <div>{method.returnValue}</div>
+      </li>
+      {/each}
+    </ul>
+  </section>
+</main>
 
 <style>
   :root {
+    --border-color: 1px solid rgba(255, 255, 255, 0.5);
+    --border-radius: 0.5rem;
     --opacity: 0.25;
+    --padding: 1rem;
+    --flex: flex;
+    --center: center;
+    --column: column;
+    --small: 0.25rem;
+    --medium: 0.5rem;
+    --text-color: #fff;
+    --bg-green: #8eeccf26;
+    --text-green: #8fedd0;
+    --bg-red: #fd576440;
+    --text-red: #fddddd;
+    --bg-blue: rgb(35 56 118/var(--opacity));
+    --text-blue: rgb(164 202 254);
+    --bg-yellow: rgb(99 49 18/var(--opacity));;
+    --text-yellow: rgb(250 202 21);
+    --bg-purple: rgb(74 29 150/var(--opacity));
+    --text-purple: rgb(202 191 253);
+    --bg-pink: rgb(117 26 61/var(--opacity));
+    --text-pink: rgb(248 180 217);
+
+
+    color: var(--text-color);
+    @media (prefers-color-scheme: light) {
+      --text-color: #000;
+      --border-color: 1px solid var(--text-color);
+      --bg-green: rgb(222 247 236);
+      --text-green: rgb(3 84 63);
+      --bg-red: rgb(253 232 232);
+      --text-red: rgb(155 28 28);
+      --bg-blue: rgb(225 239 254);
+      --text-blue: rgb(30 66 159);
+      --bg-yellow: rgb(253 246 178);;
+      --text-yellow: rgb(114 59 19);
+      --bg-purple: rgb(237 235 254);
+      --text-purple: rgb(85 33 181);
+      --bg-pink: rgb(252 232 243);
+      --text-pink: rgb(153 21 75);
+    }
   }
-  .destructive {
-    background: rgba(253, 87, 100, 0.25);
-    color: #fddddd;
+  ul {
+    margin-block: unset;
+    padding-inline-start: unset;
   }
-  header {
-    border-block-start: 1px solid rgba(255, 255, 255, 0.478);
-    border-inline-start: 1px solid rgba(255, 255, 255, 0.478);
-    border-inline-end: 1px solid rgba(255, 255, 255, 0.478);
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-  }
-  header div:not(:last-child) {
-    border-inline-end: 1px solid rgba(255, 255, 255, 0.478);
-  }
-  section {
-    border: 1px solid rgba(255, 255, 255, 0.478);
-    border-radius: 0 0 10px 10px;;
-   
+  main {
+    border: var(--border-color);
+    border-radius: var(--border-radius);
   }
   header,
-  section {
-    border: 1px solid rgba(255, 255, 255, 0.478);
+  li {
     display: grid;
     grid-template-columns: 120px 210px repeat(2,1fr);
   }
-  section > div {
-    padding: 0.5rem;
-    /* overflow-wrap: break-word; */
-    border-block-start: 1px solid rgba(255, 255, 255, 0.478);
-    word-wrap: break-word;
-    /* hyphens: auto; */
-    /* word-break: break-word; */
+  header div:not(:last-of-type), li div:not(:last-of-type) {
+    border-inline-end: var(--border-color);
   }
-  section > div:not(:nth-child(4n)) {
-    border-inline-end: 1px solid rgba(255, 255, 255, 0.478);
+  header div {
+    align-items: var(--center);
+    display: var(--flex);
+    justify-content: var(--center);
   }
-  section:hover div:nth-child(5n) {
-    display: initial;
-    transition: all 1000ms ease-out;
+  li {
+    border-block-start: var(--border-color);
   }
-  section > div:nth-child(5n) {
+  li > div {
+    padding: var(--medium);
+    word-break: break-word;
+  }
+  li > div div {
+    display: var(--flex);
+    flex-direction: var(--column);
+    gap: var(--small);
+  }
+  li > div div span {
+    align-self: flex-start;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    padding: var(--small) var(--medium);
+    text-align: var(--center);
+  }
+  .destructive {
+    background: var(--bg-red);
+    color: var(--text-red);
+  }
+  /* section > div:nth-child(5n) {
     border: none;
     border-radius: 10px;
     display: none;
@@ -92,41 +137,27 @@
     height: 100%;
     aspect-ratio: 748/537;
     transition: all 300ms ease-out;
-    /* width: 100%; */
-    /* object-fit: contain; */
-  }
-  .tags-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .tags-wrapper span {
-    align-self: flex-start;
-    border-radius: 8px;
-    padding: 0.25rem 0.5rem;
-  }
-  /* .tags-wrapper span:last-child {
-    background: rgba(164, 214, 246, 0.15);
-    color: #a5d7f7;
+    width: 100%;
+    object-fit: contain;
   } */
   .affirmitive {
-    background: rgba(142, 236, 207, 0.15);
-    color: #8fedd0;
+    background: var(--bg-green);
+    color: var(--text-green);
   }
   .array-iterator {
-    background-color: rgb(35 56 118/var(--opacity));
-    color: rgb(164 202 254);
+    background-color: var(--bg-blue);
+    color: var(--text-blue);
   }
   .stack-and-queue {
-    background-color: rgb(99 49 18/var(--opacity));
-    color: rgb(250 202 21);
+    background-color: var(--bg-yellow);
+    color: var(--text-yellow);
   }
   .sub-array {
-    background-color: rgb(74 29 150/var(--opacity));
-    color: rgb(202 191 253);
+    background-color: var(--bg-purple);
+    color: var(--text-purple);
   }
   .search-and-sort {
-    background-color: rgb(117 26 61/var(--opacity));
-    color: rgb(248 180 217);
+    background-color: var(--bg-pink);
+    color: var(--text-pink);
   }
 </style>
