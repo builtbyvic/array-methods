@@ -7,6 +7,22 @@
     "sub-array": 'sub-array',
     "search and sort": 'search-and-sort',
   }
+
+  // input
+  let array = [1,2,[3,4],5];
+  let newArray = array.flat();
+
+  // output
+  console.log(newArray);
+  // [1,2,3,4,5]
+
+  // original array
+  console.log(array);
+  // [1,2,[3,4],5]
+
+  
+
+
 </script>
 <main>
   <header>
@@ -29,6 +45,7 @@
         <div>{method.name}</div>
         <div>{method.description}</div>
         <div>{method.returnValue}</div>
+        <img src={method.exampleImage}/>
       </li>
       {/each}
     </ul>
@@ -102,6 +119,13 @@
   }
   li {
     border-block-start: var(--border-color);
+    position:relative
+  }
+  li:hover {
+    background-color: rgba(255 255 255 / 0.1);
+  }
+  li:hover img {
+    display: initial;
   }
   li > div {
     padding: var(--medium);
@@ -159,5 +183,14 @@
   .search-and-sort {
     background-color: var(--bg-pink);
     color: var(--text-pink);
+  }
+  img {
+    border: 2px solid purple;
+    border-radius: 10px;
+    display: none;
+    inset-block-start: 50%;
+    inset-inline-end: 0;
+    position: absolute;
+    z-index: 1;
   }
 </style>

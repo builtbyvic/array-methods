@@ -3,18 +3,18 @@ const methods = [
     title: "forEach()",
     name: "a.forEach(function)",
     description:
-      "Iterates through an array, invoking a funtion you specify for each element.",
+      "Iterates through an array, invoking a function you specify for each element.",
     returnValue: "Doesn't return anything.",
     mutatesArray: "yes",
     type: "array iterator",
-    exampleImage: "/images/forEach.png",
+    exampleImage: "/images/forEachLight.png",
   },
   {
     title: "map()",
     name: "a.map(function)",
     description:
-      "Iterates through an array, invoking a funtion you specify for each element.",
-    returnValue: "New array containing values returned by functiontion.",
+      "Iterates through an array, invoking a function you specify for each element.",
+    returnValue: "New array containing values returned by function.",
     mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
@@ -23,10 +23,10 @@ const methods = [
     title: "filter()",
     name: "a.filter(*function)",
     description:
-      "Iterates through an array, invoking a predicate funtion for each element.",
+      "Iterates through an array, invoking a predicate function for each element.",
     returnValue:
-      "If return value of functiontion is true, it returns an array of matches (subset of the invoked array).",
-    mutatesArray: "yes",
+      "If return value of function is true, it returns an array of matches (subset of the invoked array).",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -34,10 +34,10 @@ const methods = [
     title: "find()",
     name: "a.find(*function)",
     description:
-      "Iterates through an array, invoking a predicate funtion for each element.",
+      "Iterates through an array, invoking a predicate function for each element.",
     returnValue:
-      "Stops iterating the first time the predicate functiontion finds a matching element and returns that element, otherwise returns undefined.",
-    mutatesArray: "yes",
+      "Stops iterating the first time the predicate function finds a matching element and returns that element, otherwise returns undefined.",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -45,10 +45,10 @@ const methods = [
     title: "findIndex()",
     name: "a.findIndex(*function)",
     description:
-      "Iterates through an array, invoking a predicate funtion for each element.",
+      "Iterates through an array, invoking a predicate function for each element.",
     returnValue:
-      "Stops iterating the first time the predicate functiontion finds a matching element and returns the index of that element, otherwise returns -1.",
-    mutatesArray: "yes",
+      "Stops iterating the first time the predicate function finds a matching element and returns the index of that element, otherwise returns -1.",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -56,10 +56,10 @@ const methods = [
     title: "every()",
     name: "a.every(*function)",
     description:
-      "Iterates through an array, invoking a predicate funtion for each element.",
+      "Iterates through an array, invoking a predicate function for each element.",
     returnValue:
-      "Returns true if predicate functiontion returns true for ALL elements in the array.",
-    mutatesArray: "yes",
+      "Returns true if predicate function returns true for ALL elements in the array.",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -67,10 +67,10 @@ const methods = [
     title: "some()",
     name: "a.some(*function)",
     description:
-      "Iterates through an array, invoking a predicate funtion for each element.",
+      "Iterates through an array, invoking a predicate function for each element.",
     returnValue:
-      "Returns true if predicate functiontion returns true for at least ONE element in the array.",
-    mutatesArray: "yes",
+      "Returns true if predicate function returns true for at least ONE element in the array.",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -78,10 +78,10 @@ const methods = [
     title: "reduce()",
     name: "a.reduce(function,initial value)",
     description:
-      "Combines elements of an array using a specified functiontion to produce a single value.",
+      "Combines elements of an array using a specified function to produce a single value.",
     returnValue:
-      "Returns a single value - combination of of elements in the array dependig on the specified functiontion.",
-    mutatesArray: "yes",
+      "Returns a single value - combination of elements in the array dependig on the specified function.",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -91,8 +91,8 @@ const methods = [
     description:
       "Works like reduce() but processes array from the highest to the lowest index.",
     returnValue:
-      "Returns a single value - combination of of elements in the array dependig on the specified functiontion.",
-    mutatesArray: "yes",
+      "Returns a single value - combination of elements in the array depending on the specified function.",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -103,7 +103,7 @@ const methods = [
       "When called with O arguments, it flattens 1 level of nesting. To flatten more levels, pass a number.",
     returnValue:
       "Returns the flattened array with the specified degree of nesting.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -113,7 +113,7 @@ const methods = [
     description:
       "Works like flat() except the returned array is automatically flattened.",
     returnValue:
-      "Returns the flattened array containing the values returned by the functiontion.",
+      "Returns the flattened array containing the values returned by the function.",
     mutatesArray: "yes",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
@@ -230,7 +230,7 @@ const methods = [
     title: "sort()",
     name: "a.sort(~function)",
     description:
-      "Sorts the array in-place. Without arguments, items are sorted as strings. To sort in any other order, provide a comparison functiontion.",
+      "Sorts the array in-place. Without arguments, items are sorted as strings. To sort in any other order, provide a comparison function.",
     returnValue: "Returns the sorted array.",
     mutatesArray: "yes",
     type: "search and sort",
