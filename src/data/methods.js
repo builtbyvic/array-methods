@@ -111,10 +111,10 @@ const methods = [
     title: "flatMap()",
     name: "a.flatMap(function)",
     description:
-      "Works like flat() except the returned array is automatically flattened.",
+      "Works like map() except that the returned array is automatically flattened as if passed to flat().",
     returnValue:
       "Returns the flattened array containing the values returned by the function.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -125,7 +125,7 @@ const methods = [
       "Creates new copy of array on which it is invoked, followed by each of the arguments passed to it. Arrays are flattened, but not nested arrays.",
     returnValue:
       "Returns new array containing elements of the array on which it is invoked followed by each of the arguments given to it.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEach.png",
   },
@@ -170,7 +170,7 @@ const methods = [
     name: "a.slice(start,end)",
     description:
       "Without arguments, creates a copy of the original array. Otherwise, slices an array according to specified start(inclusive) and end(exclusive) arguments.",
-    returnValue: "Returns new sub-array with specified slicing.",
+    returnValue: "Returns new sub-array (of REMOVED items) with specified slicing.",
     mutatesArray: "no",
     type: "sub-array",
     exampleImage: "/images/forEach.png",
@@ -179,7 +179,7 @@ const methods = [
     title: "splice()",
     name: "a.splice(position,deleteCount,...items)",
     description:
-      "At index position(inclusive), deletes deleteCount items, inserts items. If deletecount is 0, inserts items without removals.",
+      "At index position(inclusive), deletes deleteCount no. of items, inserts items. If deleteCount is 0, inserts items without removals.",
     returnValue:
       "Returns array of removed items or empty array if no elements were removed.",
     mutatesArray: "yes",
