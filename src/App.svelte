@@ -29,7 +29,7 @@
     --text-yellow: rgb(114 59 19);
     }
   }
-  @media (max-width: 700px) {
+  @media (width <= 699px) {
     .app-wrapper {
       display: none;
     }
