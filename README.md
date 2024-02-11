@@ -1,3 +1,5 @@
 # JavaScript Array Methods
 
-A short summary on JavaScript array methods.
+A summary on JavaScript array methods.
+
+![Site screenshot.](/site-screenshot.png)

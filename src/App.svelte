@@ -3,6 +3,7 @@
 </script>
 
 <span>work in progress</span>
+<h1>JavaScript Array Methods</h1>
 <Method/>
 
 <style>
