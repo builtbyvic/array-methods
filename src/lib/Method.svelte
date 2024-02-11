@@ -10,11 +10,11 @@
 
   // input
   let array = [1,2,3,4,5];
-  let newArray = array.indexOf(5,3);
+  let newArray = array.entries();
 
   // output
   console.log(newArray);
-  // 4
+  // 1+2+3+4+5
 
   // original array
   console.log(array);

@@ -5,7 +5,7 @@ const methods = [
     description:
       "Iterates through an array, invoking a function you specify for each element.",
     returnValue: "Doesn't return anything.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "array iterator",
     exampleImage: "/images/forEachLight.png",
   },
@@ -222,7 +222,7 @@ const methods = [
     description: "Works like indexOf() but looks from end to beginning.",
     returnValue:
       "Returns index of first such element found or -1 if none is found.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "search and sort",
     exampleImage: "/images/forEach.png",
   },
@@ -241,7 +241,7 @@ const methods = [
     name: "a.includes(item)",
     description: "Checks whether the array contains the item.",
     returnValue: "Returns true if array has the value, otherwise false.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "search and sort",
     exampleImage: "/images/forEach.png",
   },
@@ -264,15 +264,15 @@ const methods = [
     type: "search and sort",
     exampleImage: "/images/forEach.png",
   },
-  {
-    title: "entries()",
-    name: "a.entries()",
-    description: "Returns an Array Iterator object with key/value pairs.",
-    returnValue: "Returns an Array Iterator object with key/value pairs.",
-    mutatesArray: "yes",
-    type: "search and sort",
-    exampleImage: "/images/forEach.png",
-  },
+  // {
+  //   title: "entries()",
+  //   name: "a.entries()",
+  //   description: "Returns an Array Iterator object with key/value pairs.",
+  //   returnValue: "Returns an Array Iterator object with key/value pairs.",
+  //   mutatesArray: "yes",
+  //   type: "search and sort",
+  //   exampleImage: "/images/forEach.png",
+  // },
 ];
 
 export default methods;
