@@ -200,7 +200,7 @@ const methods = [
     title: "copyWithin()",
     name: "a.copyWithin(destination index,start,end)",
     description:
-      "Copies a slice of an array to a new positionition within the array.",
+      "Copies a slice of an array to a new position within the array.",
     returnValue: "Returns the modified array.",
     mutatesArray: "yes",
     type: "sub-array",
@@ -209,10 +209,10 @@ const methods = [
   {
     title: "indexOf()",
     name: "a.indexOf(item,*position)",
-    description: "Looks for item starting from positionition *position.",
+    description: "Looks for item starting from position *position.",
     returnValue:
       "Returns index of first such element found or -1 if none is found.",
-    mutatesArray: "yes",
+    mutatesArray: "no",
     type: "search and sort",
     exampleImage: "/images/forEach.png",
   },

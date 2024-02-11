@@ -10,15 +10,15 @@
 
   // input
   let array = [1,2,3,4,5];
-  let newArray = array.copyWithin(0,2,4);
+  let newArray = array.indexOf(5,3);
 
   // output
   console.log(newArray);
-  // [3,3,3,3,5]
+  // 4
 
   // original array
   console.log(array);
-  // [1,6,6,4,5]
+  // [1,2,3,4,5]
 
   
 
