@@ -1,6 +1,7 @@
 <script>
   import Method from "./lib/Method.svelte";
   import Info from "./lib/Info.svelte";
+  import Legend from "./lib/Legend.svelte";
 </script>
 
 <Info/>
@@ -8,6 +9,7 @@
   <span>work in progress</span>
   <h1>JavaScript Array Methods</h1>
   <Method/>
+  <Legend/>
 </div>
 
 

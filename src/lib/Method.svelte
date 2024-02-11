@@ -1,29 +1,14 @@
 <script>
   import methods from "../data/methods";
-
+  
   const methodTypeClasses = {
     "array iterator": 'array-iterator',
     "stack and queue": 'stack-and-queue',
     "sub-array": 'sub-array',
     "search and sort": 'search-and-sort',
   }
-
-  // input
-  let array = [1,2,3,4,5];
-  let newArray = array.entries();
-
-  // output
-  console.log(newArray);
-  // 1+2+3+4+5
-
-  // original array
-  console.log(array);
-  // [1,2,3,4,5]
-
-  
-
-
 </script>
+
 <main>
   <header>
     <div>Title</div>
@@ -45,7 +30,7 @@
         <div>{method.name}</div>
         <div>{method.description}</div>
         <div>{method.returnValue}</div>
-        <img src={method.exampleImage}/>
+        <img class="image-dark" src={method.exampleImage} alt="code sample"/>
       </li>
       {/each}
     </ul>
@@ -147,23 +132,6 @@
     background: var(--bg-red);
     color: var(--text-red);
   }
-  /* section > div:nth-child(5n) {
-    border: none;
-    border-radius: 10px;
-    display: none;
-    height: 400px;
-    width: 400px;
-    position: absolute;
-    transition: all 1000ms ease-out;
-  }
-  section > div:nth-child(5n) img {
-    border-radius: 10px;
-    height: 100%;
-    aspect-ratio: 748/537;
-    transition: all 300ms ease-out;
-    width: 100%;
-    object-fit: contain;
-  } */
   .affirmitive {
     background: var(--bg-green);
     color: var(--text-green);
@@ -185,7 +153,6 @@
     color: var(--text-pink);
   }
   img {
-    border: 2px solid purple;
     border-radius: 10px;
     display: none;
     inset-block-start: 50%;
