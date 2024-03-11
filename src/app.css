@@ -6,7 +6,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  /* color: rgba(255, 255, 255, 0.87); */
   background-color: #242424;
 
   font-synthesis: none;
@@ -14,7 +14,49 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --border-color: 1px solid rgba(255, 255, 255, 0.5);
+  --border-radius: 0.5rem;
+  --opacity: 0.25;
+  --padding: 1rem;
+  --flex: flex;
+  --center: center;
+  --column: column;
+  --small: 0.25rem;
+  --medium: 0.5rem;
+  --text-color: #fff;
+  --bg-green: #8eeccf26;
+  --text-green: #8fedd0;
+  --bg-red: #fd576440;
+  --text-red: #fddddd;
+  --bg-blue: rgb(35 56 118 / var(--opacity));
+  --text-blue: rgb(164 202 254);
+  --bg-yellow: rgb(99 49 18 / var(--opacity));
+  --text-yellow: rgb(250 202 21);
+  --bg-purple: rgb(74 29 150 / var(--opacity));
+  --text-purple: rgb(202 191 253);
+  --bg-pink: rgb(117 26 61 / var(--opacity));
+  --text-pink: rgb(248 180 217);
+
+  color: var(--text-color);
+  @media (prefers-color-scheme: light) {
+    --text-color: #000;
+    --border-color: 1px solid var(--text-color);
+    --bg-green: rgb(222 247 236);
+    --text-green: rgb(3 84 63);
+    --bg-red: rgb(253 232 232);
+    --text-red: rgb(155 28 28);
+    --bg-blue: rgb(225 239 254);
+    --text-blue: rgb(30 66 159);
+    --bg-yellow: rgb(253 246 178);
+    --text-yellow: rgb(114 59 19);
+    --bg-purple: rgb(237 235 254);
+    --text-purple: rgb(85 33 181);
+    --bg-pink: rgb(252 232 243);
+    --text-pink: rgb(153 21 75);
+  }
 }
+
 @font-face {
   font-family: "Circular Std";
   src: url("../fonts/CircularStd-Book.woff2") format("woff2"),
