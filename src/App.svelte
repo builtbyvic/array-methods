@@ -1,15 +1,17 @@
 <script>
   import Method from "./lib/Method.svelte";
-  import Info from "./lib/Info.svelte";
+  // import Info from "./lib/Info.svelte";
   import Legend from "./lib/Legend.svelte";
+  import Search from "./lib/Search.svelte";
 </script>
 
-<Info/>
+<!-- <Info/> -->
 <div class="app-wrapper">
   <span>work in progress</span>
   <h1>JavaScript Array Methods</h1>
-  <Method/>
+  <Search/>
   <Legend/>
+  <Method/>
 </div>
 
 
@@ -31,10 +33,10 @@
     --text-yellow: rgb(114 59 19);
     }
   }
-  @media (width <= 699px) {
+  /* @media (width <= 699px) {
     .app-wrapper {
       display: none;
     }
-  }
+  } */
   
 </style>

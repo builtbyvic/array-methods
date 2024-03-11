@@ -160,4 +160,36 @@
     position: absolute;
     z-index: 1;
   }
+  @media(width <= 699px) {
+    header {
+      display: none;
+    }
+    li {
+      border: var(--border-color);
+      display: flex;
+      flex-direction: column;
+    }
+    li:not(:first-of-type) {
+      border-block-start: none;
+    }
+    main {
+      border: none;
+    }
+    header div:not(:last-of-type), li div:not(:last-of-type) {
+      border-inline-end: none;
+    }
+    li:first-of-type {
+      border-radius: var(--small) var(--small) 0 0;
+    }
+    li:last-of-type {
+      border-radius: 0 0 var(--small) var(--small);
+    }
+    li:hover img {
+      display: initial;
+    }
+    img {
+      display: block;
+      position: static;
+    }
+  }
 </style>
