@@ -3,6 +3,7 @@
 
   import methods from "../data/methods";
   import Search from "./Search.svelte";
+  import Badge from "./Badge.svelte";
 
   let searchTerm = '';
   let filteredMethods = [];
@@ -54,8 +55,8 @@
         <div>
           <span>{method.title}</span>
           <div>
-            <span class="{method.mutatesArray === "no" ? 'destructive' : 'affirmitive'}">{method.mutatesArray}</span>
-            <span class="{methodTypeClasses[method.type]}">{method.type}</span>
+            <Badge badgeText = {method.mutatesArray}/>
+            <Badge badgeText={method.type}/>
           </div>
         </div>
         <div>{method.name}</div>
@@ -116,30 +117,6 @@
     display: inline-block;
     padding: var(--small) var(--medium);
     text-align: var(--center);
-  }
-  .destructive {
-    background: var(--bg-red);
-    color: var(--text-red);
-  }
-  .affirmitive {
-    background: var(--bg-green);
-    color: var(--text-green);
-  }
-  .array-iterator {
-    background-color: var(--bg-blue);
-    color: var(--text-blue);
-  }
-  .stack-and-queue {
-    background-color: var(--bg-yellow);
-    color: var(--text-yellow);
-  }
-  .sub-array {
-    background-color: var(--bg-purple);
-    color: var(--text-purple);
-  }
-  .search-and-sort {
-    background-color: var(--bg-pink);
-    color: var(--text-pink);
   }
   img {
     border-radius: 10px;

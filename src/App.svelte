@@ -1,42 +1,13 @@
 <script>
-  
-  import Method from "./lib/Method.svelte";
-  // import Info from "./lib/Info.svelte";
   import Legend from "./lib/Legend.svelte";
+  import Method from "./lib/Method.svelte";
+  
   
 </script>
 
-<!-- <Info/> -->
 <div class="app-wrapper">
-  <span>work in progress</span>
+  <span style:color="#ff6200"><a style:color="currentcolor" href="https://svelte.dev" class="svelte-ra4s43">* made with svelte</a></span>
   <h1>JavaScript Array Methods</h1>
   <Legend/>
   <Method/>
 </div>
-
-
-<style>
-
-  span {
-    --bg-yellow: rgb(99 49 18 / 0.25);
-    --text-yellow: rgb(250 202 21);
-    --padding: 0.25rem;
-    background-color: var(--bg-yellow);
-    border-radius: var(--padding);
-    color: var(--text-yellow);
-    display: inline-block;
-    margin-bottom: calc(var(--padding) * 4);
-    padding: var(--padding) calc(var(--padding) * 4);
-
-    @media (prefers-color-scheme: light) {
-    --bg-yellow: rgb(253 246 178);
-    --text-yellow: rgb(114 59 19);
-    }
-  }
-  /* @media (width <= 699px) {
-    .app-wrapper {
-      display: none;
-    }
-  } */
-  
-</style>
