@@ -1,6 +1,6 @@
 <script>
-  let backgroundColor;
-  let color;
+  export let backgroundColor = '';
+  export let color = '';
 
   export let badgeText;
   switch (badgeText) {
@@ -41,6 +41,7 @@
     align-self: flex-start;
     border-radius: var(--border-radius);
     display: inline-block;
+    margin: var(--small);
     padding: var(--small) var(--medium);
     text-align: var(--center);
   }

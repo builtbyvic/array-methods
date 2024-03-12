@@ -39,7 +39,7 @@
 
 <Search onInput={filterMethods} bind:searchTerm = {searchTerm}/>
 <main>
-  <header>
+  <header style:border-block-end={filteredMethods.length ? '' : 'var(--border-color)'}>
     <div>Title</div>
     <div>Code</div>
     <div>Description</div>
@@ -47,7 +47,7 @@
   </header>
   <section>
     {#if filteredMethods.length === 0}
-    <p>No matching methods found</p>
+      <p style="text-align: var(--center);">No matching methods found.</p>
     {:else}
     <ul>
       {#each filteredMethods as method (method.title)}
