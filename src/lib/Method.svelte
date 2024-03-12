@@ -1,5 +1,32 @@
 <script>
+  import { onMount } from "svelte";
+
   import methods from "../data/methods";
+  import Search from "./Search.svelte";
+
+  let searchTerm = '';
+  let filteredMethods = [];
+
+  const filterMethods = () => {
+    if (searchTerm.trim() === '') {
+      // If the search term is empty, display all methods
+      filteredMethods = methods;
+    } else {
+      // Filter methods based on the search term
+      const searchRegex = new RegExp(searchTerm, 'i');
+      filteredMethods = methods.filter(method => {
+        return (
+          searchRegex.test(method.title) ||
+          searchRegex.test(method.name) ||
+          searchRegex.test(method.description)
+        );
+      });
+    }
+  };
+
+  onMount(() => {
+    filterMethods();
+  })
   
   const methodTypeClasses = {
     "array iterator": 'array-iterator',
@@ -9,6 +36,7 @@
   }
 </script>
 
+<Search onInput={filterMethods} bind:searchTerm = {searchTerm}/>
 <main>
   <header>
     <div>Title</div>
@@ -17,8 +45,11 @@
     <div>Return Value</div>
   </header>
   <section>
+    {#if filteredMethods.length === 0}
+    <p>No matching methods found</p>
+    {:else}
     <ul>
-      {#each methods as method}
+      {#each filteredMethods as method (method.title)}
       <li>
         <div>
           <span>{method.title}</span>
@@ -34,6 +65,7 @@
       </li>
       {/each}
     </ul>
+    {/if}
   </section>
 </main>
 

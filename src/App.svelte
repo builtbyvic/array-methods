@@ -1,15 +1,15 @@
 <script>
+  
   import Method from "./lib/Method.svelte";
   // import Info from "./lib/Info.svelte";
   import Legend from "./lib/Legend.svelte";
-  import Search from "./lib/Search.svelte";
+  
 </script>
 
 <!-- <Info/> -->
 <div class="app-wrapper">
   <span>work in progress</span>
   <h1>JavaScript Array Methods</h1>
-  <Search/>
   <Legend/>
   <Method/>
 </div>
