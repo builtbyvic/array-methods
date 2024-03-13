@@ -7,17 +7,18 @@ const methods = [
     returnValue: "No return value. Returns `undefined`.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/forEachLight.png",
+    exampleImage: "/images/forEach.png",
   },
   {
     title: "map()",
     name: "a.map(callback)",
     description:
       "Iterates through an array, invoking a function you specify for each element. The function you pass should RETURN a value.",
-    returnValue: "New array containing values returned by the callback function.",
+    returnValue:
+      "New array containing values returned by the callback function.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/mapLight.png",
+    exampleImage: "/images/map.png",
   },
   {
     title: "filter()",
@@ -28,7 +29,7 @@ const methods = [
       "If the return value of the function is true/truthy, it returns an array of matches (a subset of the invoked array).",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/filterLight.png",
+    exampleImage: "/images/filter.png",
   },
   {
     title: "find()",
@@ -39,7 +40,7 @@ const methods = [
       "Stops iterating THE FIRST TIME the predicate function finds a matching element and returns THAT ELEMENT, otherwise it returns undefined.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/findLight.png",
+    exampleImage: "/images/find.png",
   },
   {
     title: "findIndex()",
@@ -50,7 +51,7 @@ const methods = [
       "Stops iterating THE FIRST TIME the predicate function finds a matching element and returns the INDEX OF THAT ELEMENT, otherwise returns -1.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/findIndexLight.png",
+    exampleImage: "/images/findIndex.png",
   },
   {
     title: "every()",
@@ -61,7 +62,7 @@ const methods = [
       "Returns TRUE if the predicate function returns true for ALL elements in the array, otherwise returns false.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/everyLight.png",
+    exampleImage: "/images/every.png",
   },
   {
     title: "some()",
@@ -72,7 +73,7 @@ const methods = [
       "Returns TRUE if the predicate function returns true for AT LEAST ONE element in the array.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/someLight.png",
+    exampleImage: "/images/some.png",
   },
   {
     title: "reduce()",
@@ -83,7 +84,7 @@ const methods = [
       "Returns a single value - combination of elements in the array depending on the specified function.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/reduceLight.png",
+    exampleImage: "/images/reduce.png",
   },
   {
     title: "reduceRight()",
@@ -94,7 +95,7 @@ const methods = [
       "Returns a single value - combination of elements in the array depending on the specified function.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/reduceRightLight.png",
+    exampleImage: "/images/reduceRight.png",
   },
   {
     title: "flat()",
@@ -105,7 +106,7 @@ const methods = [
       "Returns the flattened array with the specified degree of nesting.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/flatLight.png",
+    exampleImage: "/images/flat.png",
   },
   {
     title: "flatMap()",
@@ -116,7 +117,7 @@ const methods = [
       "Returns the flattened array containing the values returned by the function.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/flatMapLight.png",
+    exampleImage: "/images/flatMap.png",
   },
   {
     title: "concat()",
@@ -127,7 +128,7 @@ const methods = [
       "Returns a new array containing elements of the array on which it is invoked followed by each of the arguments given to it.",
     mutatesArray: "no",
     type: "array iterator",
-    exampleImage: "/images/concatLight.png",
+    exampleImage: "/images/concat.png",
   },
   {
     title: "shift()",
@@ -136,7 +137,7 @@ const methods = [
     returnValue: "Returns the removed item.",
     mutatesArray: "yes",
     type: "stack and queue",
-    exampleImage: "/images/shiftLight.png",
+    exampleImage: "/images/shift.png",
   },
   {
     title: "unshift()",
@@ -145,7 +146,7 @@ const methods = [
     returnValue: "Returns the new length of the array.",
     mutatesArray: "yes",
     type: "stack and queue",
-    exampleImage: "/images/unshiftLight.png",
+    exampleImage: "/images/unshift.png",
   },
   {
     title: "pop()",
@@ -154,7 +155,7 @@ const methods = [
     returnValue: "Returns the removed item.",
     mutatesArray: "yes",
     type: "stack and queue",
-    exampleImage: "/images/popLight.png",
+    exampleImage: "/images/pop.png",
   },
   {
     title: "push()",
@@ -163,17 +164,18 @@ const methods = [
     returnValue: "Returns the new length of the array.",
     mutatesArray: "yes",
     type: "stack and queue",
-    exampleImage: "/images/pushLight.png",
+    exampleImage: "/images/push.png",
   },
   {
     title: "slice()",
     name: "*a.slice(start,end)",
     description:
       "Without arguments, it creates a copy of the original array. Otherwise, slices an array according to specified start(inclusive) and end(exclusive) arguments.",
-    returnValue: "Returns a new sub-array (of REMOVED items) with the specified slicing.",
+    returnValue:
+      "Returns a new sub-array (of REMOVED items) with the specified slicing.",
     mutatesArray: "no",
     type: "sub-array",
-    exampleImage: "/images/sliceLight.png",
+    exampleImage: "/images/slice.png",
   },
   {
     title: "splice()",
@@ -184,7 +186,7 @@ const methods = [
       "Returns array of removed items or empty array if no elements were removed.",
     mutatesArray: "yes",
     type: "sub-array",
-    exampleImage: "/images/spliceLight.png",
+    exampleImage: "/images/splice.png",
   },
   {
     title: "fill()",
@@ -194,7 +196,7 @@ const methods = [
     returnValue: "Returns the modified array.",
     mutatesArray: "yes",
     type: "sub-array",
-    exampleImage: "/images/fillLight.png",
+    exampleImage: "/images/fill.png",
   },
   {
     title: "copyWithin()",
@@ -204,7 +206,7 @@ const methods = [
     returnValue: "Returns the modified array.",
     mutatesArray: "yes",
     type: "sub-array",
-    exampleImage: "/images/copyWithinLight.png",
+    exampleImage: "/images/copyWithin.png",
   },
   {
     title: "indexOf()",
@@ -214,7 +216,7 @@ const methods = [
       "Returns the index of FIRST such element found or -1 if none is found.",
     mutatesArray: "no",
     type: "search and sort",
-    exampleImage: "/images/indexOfLight.png",
+    exampleImage: "/images/indexOf.png",
   },
   {
     title: "lastIndexOf()",
@@ -224,7 +226,7 @@ const methods = [
       "Returns index of FIRST such element found or -1 if none is found.",
     mutatesArray: "no",
     type: "search and sort",
-    exampleImage: "/images/lastIndexOfLight.png",
+    exampleImage: "/images/lastIndexOf.png",
   },
   {
     title: "sort()",
@@ -234,7 +236,7 @@ const methods = [
     returnValue: "Returns the sorted array.",
     mutatesArray: "yes",
     type: "search and sort",
-    exampleImage: "/images/sortLight.png",
+    exampleImage: "/images/sort.png",
   },
   {
     title: "includes()",
@@ -243,7 +245,7 @@ const methods = [
     returnValue: "Returns true if array has the value, otherwise false.",
     mutatesArray: "no",
     type: "search and sort",
-    exampleImage: "/images/includesLight.png",
+    exampleImage: "/images/includes.png",
   },
   {
     title: "reverse()",
@@ -252,7 +254,7 @@ const methods = [
     returnValue: "Returns the reversed array.",
     mutatesArray: "yes",
     type: "search and sort",
-    exampleImage: "/images/reverseLight.png",
+    exampleImage: "/images/reverse.png",
   },
   {
     title: "join()",
@@ -262,7 +264,7 @@ const methods = [
     returnValue: "Returns a string with all array elements joined.",
     mutatesArray: "yes",
     type: "search and sort",
-    exampleImage: "/images/joinLight.png",
+    exampleImage: "/images/join.png",
   },
   // {
   //   title: "entries()",

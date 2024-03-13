@@ -62,7 +62,7 @@
         <div>{method.name}</div>
         <div>{method.description}</div>
         <div>{method.returnValue}</div>
-        <img class="image-dark" src={method.exampleImage} alt="code sample"/>
+        <img src={method.exampleImage} alt="code sample"/>
       </li>
       {/each}
     </ul>
