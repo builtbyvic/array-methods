@@ -20,10 +20,15 @@
   input {
     border: var(--border-color);
     border-radius: var(--border-radius);
+    cursor: pointer;
     font-size: var(--large);
     margin-block-end: var(--regular);
     inline-size: 100%;
     padding: var(--regular);
+    transition: all 300ms linear;
+  }
+  input:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
   @media (width <= 699px) {
     span {
