@@ -1,6 +1,7 @@
 <script>
   import Legend from "./lib/Legend.svelte";
   import Method from "./lib/Method.svelte";
+  import Footer from "./lib/Footer.svelte";
   
   
 </script>
@@ -10,4 +11,5 @@
   <h1>JavaScript Array Methods</h1>
   <Legend/>
   <Method/>
+  <Footer/>
 </div>
